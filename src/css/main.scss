@@ -9,11 +9,52 @@
 
 .element-atom,
 .interactive-atom {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 body {
   background-color: #121212;
+}
+
+.bh-header {
+  margin: 4px 12px;
+  min-height: 300px;
+
+  @include mq(phablet) {
+    margin: 4px 20px;
+  }
+
+  svg {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-family: GH Guardian Headline, Guardian Egyptian Web, Georgia, serif;
+    font-size: 17px;
+    line-height: 115%;
+    font-weight: 400;
+
+    @include mq(tablet) {
+      font-size: 24px;
+      width: 70%;
+    }
+
+    @include mq(desktop) {
+      font-size: 28px;
+      width: 80%;
+      margin-top: -77px;
+      margin-bottom: 50px;
+    }
+
+    .yellow {
+      color: #ffe500;
+    }
+
+    .bold,
+    .yellow {
+      font-weight: 700;
+    }
+  }
 }
 
 .bh-blocks {
@@ -26,19 +67,28 @@ body {
   }
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   color: #fff;
 }
 
-.bh-timelibe-one, .bh-timelibe-two, .bh-timelibe-three {
-  height: 100vh;
+
+
+.bh-timelibe-one,
+.bh-timelibe-two,
+.bh-timelibe-three {
+  height: 99vh;
   overflow-y: scroll;
   border-right: 1px solid #fff;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 12px;
+
+  @include mq(phablet) {
+    padding: 0 20px;
+  }
 
   &::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
   }
 
   &::-webkit-scrollbar-track {
@@ -48,20 +98,59 @@ h1, h2, p {
 
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: yellow;
+    background-color: #ffe500;
+  }
+
+  h2 {
+    font-family: GH Guardian Headline,
+      Guardian Egyptian Web,
+      Georgia,
+      serif;
+    font-size: 32px;
+    line-height: 115%;
+    font-weight: 900;
+    margin-bottom: 32px;
+    min-height: 70px;
+  }
+}
+
+.placeholder-block {
+  h2 {
+    font-family: GH Guardian Headline, Guardian Egyptian Web, Georgia, serif;
+    font-size: 17px;
+    line-height: 135%;
+    font-weight: 700;
+    margin-bottom: 0;
+    min-height: 0;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 135%;
   }
 }
 
 .bh-timelibe-one {
-  width: 40%;
+  width: unset;
+
+  @include mq(desktop) {
+    width: 40%;
+    border-left: 1px solid #fff;
+  }
 }
 
-.bh-timelibe-two, .bh-timelibe-three {
-  width: 30%;
+.bh-timelibe-two,
+.bh-timelibe-three {
+  width: unset;
+
+  @include mq(desktop) {
+    width: 30%;
+  }
 }
 
 .image-wrapper {
   background-color: pink;
   width: 100%;
   height: 300px;
+  margin-bottom: 24px;
 }
