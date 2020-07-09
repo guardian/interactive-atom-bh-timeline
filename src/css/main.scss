@@ -150,6 +150,7 @@ p {
   overflow-y: hidden;
   border-bottom: 1px solid #121212;
   padding: 0 12px;
+  box-sizing: border-box;
 
   @include mq(phablet) {
     padding: 0 20px;
