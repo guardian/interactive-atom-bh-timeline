@@ -25,6 +25,55 @@ body {
   }
 }
 
+.content__dateline {
+  color: #f6f6f6;
+  @include mq($from: desktop) {
+    transform: translate(-8px, -18px)rotate(-5deg);
+  }
+}
+
+.meta__extras {
+  @include mq($from: desktop) {
+    border: none;
+    transform: translate(-8px, -18px)rotate(-7deg);
+  }
+}
+
+.content__meta-container {
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  h3 {
+    font-size: 18px;
+    color: #ffe500;
+    margin-top: -5px;
+    display: none;
+    font-weight: 800;
+    font-family: GH Guardian Headline, Guardian Egyptian Web, Georgia, serif;
+    transform: translate(-10px, -12px)rotate(-5deg);
+
+    @include mq($from: desktop) {
+      display: block;
+    }
+  }
+
+  .byline {
+    display: none;
+  }
+
+  @include mq($from: desktop) {
+    height: 120px;
+    background-image: url('https://uploads.guim.co.uk/2020/07/09/YELLOW_CIRCLE.png');
+    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100px;
+    right: -30px;
+    padding: 80px;
+  }
+}
+
 .bh-header {
   margin: 4px 12px;
   min-height: 300px;
@@ -131,8 +180,12 @@ p {
     line-height: 115%;
     font-weight: 900;
     margin-bottom: 32px;
-    min-height: 70px;
+    min-height: 20px;
     color: #121212;
+
+    @include mq($from: desktop) {
+      min-height: 70px;
+    }
 
     &.header-title {
       position: sticky;
@@ -172,6 +225,15 @@ p {
     min-height: 0;
     color: #121212;
     background-color: #fff;
+
+    &:before {
+      display: inline-block;
+      content: '';
+      height: 28px;
+      width: 1px;
+      background-color: #121212;
+      margin-right: 5px;
+    }
 
     &.year {
       font-family: "Guardian Titlepiece";
