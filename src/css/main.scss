@@ -28,14 +28,26 @@ body {
 .content__dateline {
   color: #f6f6f6;
   @include mq($from: desktop) {
-    transform: translate(-8px, -18px)rotate(-5deg);
+    transform: translate(-8px, -18px) rotate(-5deg);
   }
 }
 
 .meta__extras {
   @include mq($from: desktop) {
     border: none;
-    transform: translate(-8px, -18px)rotate(-7deg);
+    transform: translate(-8px, -18px) rotate(-7deg);
+  }
+  .social-icon--facebook,
+  .social-icon--twitter,
+  .social-icon--email {
+    background-color: transparent;
+    border: 1px solid white;
+    fill: white;
+    transition: background-color 0.3s, fill 0.3s;
+    &:hover {
+      background-color: #ffe500;
+      fill: #121212;
+    }
   }
 }
 
@@ -50,7 +62,7 @@ body {
     display: none;
     font-weight: 800;
     font-family: GH Guardian Headline, Guardian Egyptian Web, Georgia, serif;
-    transform: translate(-10px, -12px)rotate(-5deg);
+    transform: translate(-10px, -12px) rotate(-5deg);
 
     @include mq($from: desktop) {
       display: block;
@@ -63,7 +75,7 @@ body {
 
   @include mq($from: desktop) {
     height: 120px;
-    background-image: url('https://uploads.guim.co.uk/2020/07/09/YELLOW_CIRCLE.png');
+    background-image: url("https://uploads.guim.co.uk/2020/07/09/YELLOW_CIRCLE.png");
     background-size: cover;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -82,7 +94,7 @@ body {
     margin: 4px 20px;
   }
 
-  svg {
+  .black-history {
     margin-bottom: 40px;
   }
 
@@ -141,8 +153,6 @@ p {
   color: #fff;
 }
 
-
-
 .bh-timelibe-one,
 .bh-timelibe-two,
 .bh-timelibe-three {
@@ -200,7 +210,7 @@ p {
 .placeholder-block {
   display: flex;
 
-  @include mq($from: desktop){
+  @include mq($from: desktop) {
     flex-direction: column;
   }
 
@@ -215,7 +225,6 @@ p {
       width: 100%;
       padding: 0;
     }
-
   }
   h2 {
     font-family: GH Guardian Headline, Guardian Egyptian Web, Georgia, serif;
@@ -229,7 +238,7 @@ p {
 
     &:before {
       display: inline-block;
-      content: '';
+      content: "";
       height: 28px;
       width: 1px;
       background-color: #121212;
